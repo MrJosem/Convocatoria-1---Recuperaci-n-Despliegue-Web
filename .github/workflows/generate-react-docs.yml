@@ -1,4 +1,4 @@
-name: "Generación de docs"
+name: "Generación docs React"
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,6 @@ on:
 
 jobs:
   docs:
-    if: ${{ github.event.inputs.environment == 'docs'}}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,18 +17,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: "3.13"
-          cache: "pip"
+          node-version: "20"
+          cache: "npm"
 
-      - name: Install dependencies
-        run: pip install -r ./Pagina-backend-docs/requirements.txt
+      - name: Instalar dependencias
+        run: npm ci
 
-      - name: Generating documentation
-        run: make html
-        working-directory: "./Pagina-backend-docs/docs"
+      - name: Instalaciones redundantes
+        run: | 
+          npm install --save-dev clean-jsdoc-theme
+          npm install -D jsdoc-babel
+
+      - name: Generar docs
+        working-directory: ./Pagina-frontend
+        run: npx jsdoc -c jsdoc.json
 
       - name: Push changes
         run: |
@@ -38,3 +42,4 @@ jobs:
           git add .
           git commit -m "Automated update from GitHub Actions"
           git push origin main
+

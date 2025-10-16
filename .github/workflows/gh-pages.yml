@@ -1,4 +1,4 @@
-name: "Deploy on gh-pages"
+name: "Despliegue en gh-pages"
 on:
     workflow_dispatch:
         inputs:

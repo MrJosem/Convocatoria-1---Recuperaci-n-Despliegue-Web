@@ -1,4 +1,4 @@
-name: Destroy Terraform in AWS
+name: Destroy de Terraform (tfstate)
 
 on:
   workflow_dispatch:

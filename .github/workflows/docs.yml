@@ -1,0 +1,40 @@
+name: "Docs + deploy with bucket s3"
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: "Select the deployment environment"
+        options:
+          - docs
+
+jobs:
+  docs:
+    if: ${{ github.event.inputs.environment == 'docs'}}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r ./Pagina-backend-docs/requirements.txt
+
+      - name: Generating documentation
+        run: make html
+        working-directory: "./Pagina-backend-docs/docs"
+
+      - name: Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Automated update from GitHub Actions"
+          git push origin main

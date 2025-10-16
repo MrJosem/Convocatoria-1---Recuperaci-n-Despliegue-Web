@@ -1,0 +1,5 @@
+aws_region    = "us-east-1"
+name          = "bucket-s3-jose-manuel"
+access_key    = "ASIA2UC3BHTCWFDM4VFY"
+secret_key    = "P3Vyt7Kn3UhylnQbTXlEqu0zoAw5WClE7fPQfjZ2"
+session_token = "IQoJb3JpZ2luX2VjEN///////////wEaCXVzLXdlc3QtMiJIMEYCIQCOa14v2je0DqG4rNEMcfMy+7gB+qoHe5WoP5+k70iUEgIhAILxRuBXIHMwEpgvJZGTMIeHtNdElp1IYGe6brR9MBeDKq8CCIj//////////wEQABoMNzMwMzM1MzYyMjQ1Igx3yjj7EQr+aAt5L6QqgwJsgRb+r7c8JIil06StMajGcQt8qM8qGm/GwdLgPv6fgl9G1kw83PVffXBj0t6EYAoo8hFRBCvHkD/brYr6T1JsJQb1kgSh9yj3j5mxY7GMZxs/7427KKE81pZRwNq7kbNqng/8FizQsUZaUTCfju3/QHWvv9jUwEtdokI8wyAVzUQrrZiexyA+8ktFnUAtZZW11mBlq0cbWaDpWYpMMH7v8L3dIY71yREoBqwVE9v35XnIb3LqmqdXJOmnQ+1eG2ANbDr76gY/C+zIImIUhwYd5VTnt3/HRa3OdfIzuOP2WzU8N9lKVIenqad9vEYkwH9gxjY7l5mc/AnHvH3YtR+S8pjzMKKswscGOpwB0kF82b6nPpf66x3BUu0RgqiWcBGwhiKTa1hPI4xvzpBqCV4JVFNidSXe5q9y42z9IAItcjgRYAoBoiFXCkBVDshH+Br6B/W50bSFUiV4KMQ4vE4lHf9KMxyd8DtiHYPr7bqcHDCbWNWazJQY/tnlna+Rpi+AAh6wmes5n79urmfCTrqNh4iFtOsqmKI5kHC62hcdPNl7NKLbvdN+"

@@ -28,7 +28,6 @@ jobs:
 
       - name: Instalaciones redundantes
         run: | 
-          npm install --save-dev clean-jsdoc-theme
           npm install -D jsdoc-babel
 
       - name: Generar docs

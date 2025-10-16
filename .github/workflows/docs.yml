@@ -1,4 +1,4 @@
-name: "Docs + deploy with bucket s3"
+name: "Generación de docs"
 on:
   workflow_dispatch:
     inputs:

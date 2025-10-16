@@ -80,10 +80,10 @@ resource "aws_s3_object" "object-upload" {
   source   = each.value.filename
   content_type = lookup({
     "html" = "text/html"
-    "css"  = "text/css"
-    "png"  = "image/png",
-    "gif"  = "image/gif",
-    "svg"  = "image/svg+xml"
-    "webp" = "image/webp"
+    # "css"  = "text/css"
+    # "png"  = "image/png",
+    # "gif"  = "image/gif",
+    # "svg"  = "image/svg+xml"
+    # "webp" = "image/webp"
   }, regex("^.*\\.([a-z]+)$", each.key)[0], "application/octet-stream")
 }

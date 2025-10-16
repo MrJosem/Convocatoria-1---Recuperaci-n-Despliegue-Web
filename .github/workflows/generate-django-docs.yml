@@ -38,3 +38,10 @@ jobs:
           git add .
           git commit -m "Automated update from GitHub Actions"
           git push origin main
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Pagina-backend-docs/docs/build/html
+          force_orphan: true
